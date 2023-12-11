@@ -12,7 +12,7 @@ export default function Signup() {
   const [lastName, setLastName] = useState("");
   const [skills, setSkills] = useState([]);
   const [links, setLinks] = useState([]);
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const nextStep = () => {
     if (step === 2) setStep(step + 3);
     else setStep(step + 1);
