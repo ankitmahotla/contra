@@ -56,8 +56,8 @@ export default function Otp({ prevStep, email }) {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-2xl font-semibold">We emailed you a code</h1>
-      <p className="mt-2">Enter the verification code sent to:</p>
+      <h1 className="text-3xl font-semibold">We emailed you a code</h1>
+      <p className="mt-4">Enter the verification code sent to:</p>
       <button className="flex items-center mb-2 gap-2 " onClick={prevStep}>
         <span className="bg-yellow-50 p-1 font-semibold text-slate-600">
           {email}
