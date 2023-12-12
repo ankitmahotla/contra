@@ -156,7 +156,9 @@ export default function Five({ prevStep, nextStep, links, setLinks }) {
               <p className="text-sm text-slate-600">{links.length}/7</p>
             )}
             {links.map((link, index) => (
-              <div
+              <a
+                href={link.link}
+                target="_blank"
                 key={index}
                 className="flex w-1/2 lg:w-full items-center justify-between text-slate-600 my-4"
               >
@@ -178,7 +180,7 @@ export default function Five({ prevStep, nextStep, links, setLinks }) {
                     <MdOutlineDelete size={25} />
                   </button>
                 </div>
-              </div>
+              </a>
             ))}
             {links.length > 0 && links.length < 7 && (
               <button

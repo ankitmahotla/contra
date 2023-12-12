@@ -70,11 +70,17 @@ export default function InfoCard({ firstName, lastName, skills, links }) {
         <div className="flex gap-3 my-6">
           {links.map((link, index) =>
             link.icon === "instagram" ? (
-              <FaInstagram key={index} size={25} color="gray" />
+              <a href={link.link} target="_blank">
+                <FaInstagram key={index} size={25} color="gray" />
+              </a>
             ) : link.icon === "linkedin" ? (
-              <FaLinkedin key={index} size={25} color="gray" />
+              <a href={link.link} target="_blank">
+                <FaLinkedin key={index} size={25} color="gray" />
+              </a>
             ) : (
-              <CiLink key={index} size={25} color="gray" />
+              <a href={link.link} target="_blank">
+                <CiLink key={index} size={25} color="gray" />
+              </a>
             )
           )}
         </div>
