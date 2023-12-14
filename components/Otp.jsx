@@ -56,21 +56,23 @@ export default function Otp({ prevStep, email }) {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-semibold">We emailed you a code</h1>
-      <p className="mt-4">Enter the verification code sent to:</p>
-      <button className="flex items-center mb-2 gap-2 " onClick={prevStep}>
+      <h1 className="text-2xl lg:text-3xl text-center">
+        We emailed you a code
+      </h1>
+      <p className="mt-3">Enter the verification code sent to:</p>
+      <button className="flex items-center mb-4 gap-2 " onClick={prevStep}>
         <span className="bg-yellow-50 p-1 font-semibold text-slate-600">
           {email}
         </span>
         <GoPencil size={18} />
       </button>
-      <div className="border border-slate-300 rounded-2xl px-4">
+      <div className="flex border border-slate-300 focus-within:border-black rounded-2xl px-6">
         {otp.map((data, index) => {
           return (
             <input
               type="text"
               name="otp"
-              className="w-12 h-16 text-center focus:outline-none"
+              className="w-10 h-16 text-center focus:outline-none placeholder:text-slate-200"
               maxLength="1"
               key={index}
               value={data}
@@ -82,11 +84,6 @@ export default function Otp({ prevStep, email }) {
           );
         })}
       </div>
-
-      {/* <input
-        type="text"
-        className="w-72 h-16 border text-center border-slate-300 rounded-2xl mt-2"
-      /> */}
       <p className="text-sm text-slate-500 mt-2">
         Didn't get your code?{" "}
         <span className="text-indigo-600">Send a new code</span>

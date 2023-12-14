@@ -7,22 +7,27 @@ export default function First({
 }) {
   return (
     <div>
-      <h2 className="text-2xl lg:text-4xl font-medium my-2 lg:my-4">
-        What's your name?
-      </h2>
-      <div className="flex flex-col lg:flex-row gap-5 my-3">
-        <div className="w-full lg:w-40 px-2 py-4 border border-slate-200 rounded-xl">
-          <p className="text-xs text-slate-600 mb-1">First Name</p>
+      <div className="flex items-center gap-2 my-2 mb-6 lg:my-4">
+        <h2 className="text-2xl lg:text-3xl font-medium">What's your name?</h2>
+        <img src="../hands.svg" />
+      </div>
+      <div className="flex flex-col lg:flex-row gap-4 my-3 lg:mt-6">
+        <div className="relative">
+          <label className="absolute top-3 left-4 text-xs text-slate-600">
+            First Name
+          </label>
           <input
-            className="focus:outline-none w-36"
+            className="w-full lg: border border-slate-200 rounded-lg pl-4 pt-7 pb-4 focus:outline-none focus:active:border-black"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
         </div>
-        <div className="w-full lg:w-40 px-2 py-4 border border-slate-200 rounded-xl">
-          <p className="text-xs text-slate-600 mb-1">Last Name</p>
+        <div className="relative mt-4 lg:mt-0">
+          <label className="absolute top-3 left-4 text-xs text-slate-600">
+            Last Name
+          </label>
           <input
-            className="focus:outline-none w-36"
+            className="w-full lg: border border-slate-200 rounded-lg pl-4 pt-7 pb-4 focus:outline-none focus:active:border-black"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
@@ -30,7 +35,7 @@ export default function First({
       </div>
       <div className="flex flex-col lg:flex-row">
         <button
-          className={`bg-black text-white rounded-3xl p-3 mt-4 text-sm ${
+          className={`bg-black text-white rounded-3xl font-medium p-3 lg:py-2 mt-4 ${
             firstName.length > 0 && lastName.length > 0
               ? ""
               : "opacity-10 cursor-not-allowed"

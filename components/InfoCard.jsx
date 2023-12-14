@@ -8,7 +8,7 @@ export default function InfoCard({ firstName, lastName, skills, links }) {
   const name = firstName.length > 0 ? `${firstName} ${lastName}` : "Name";
 
   return (
-    <div className="hidden lg:block shadow-lg p-10 rounded-xl">
+    <div className="hidden lg:flex flex-col shadow-lg lg:p-6 xl:p-10 rounded-xl">
       <div className="flex items-center justify-center mb-4">
         <img
           src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
