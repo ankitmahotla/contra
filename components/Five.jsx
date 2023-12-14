@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 import { GrFormPrevious } from "react-icons/gr";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -206,7 +206,7 @@ export default function Five({ prevStep, nextStep, links, setLinks }) {
                   </div>
                 </a>
                 {hoveredLink === index && (
-                  <div className="absolute bg-black text-sm text-white p-2 rounded-lg top-full left-1/2 transform -translate-x-1/2 mt-2 transition-all duration-500 ease-in-out">
+                  <div className="absolute bg-black text-sm text-white p-2 rounded-lg top-full left-1/4 transform -translate-x-1/4 mt-2 z-10 transition-all duration-500 ease-in-out">
                     {link.link}
                   </div>
                 )}
