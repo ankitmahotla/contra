@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrFormPrevious } from "react-icons/gr";
 
 const data = [
@@ -34,6 +34,15 @@ export default function Second({ prevStep, nextStep, skills, setSkills }) {
     setFilteredResults(filtered);
     setShowDropDown(true);
     if (value === "") setShowDropDown(false);
+  };
+
+  const handleKeyDown = (event) => {
+    const value = event.target.value;
+
+    if (value === "" && event.key === "Backspace" && selectedItems.length > 0) {
+      // Remove the last selected item on Backspace key press
+      setSelectedItems((prevSelectedItems) => prevSelectedItems.slice(0, -1));
+    }
   };
 
   const handleItemClick = (item) => {
@@ -80,6 +89,7 @@ export default function Second({ prevStep, nextStep, skills, setSkills }) {
               className="focus:outline-none ml-2"
               value={inputValue}
               onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
             />
           </div>
         </div>
