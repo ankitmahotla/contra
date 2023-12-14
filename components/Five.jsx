@@ -44,7 +44,7 @@ const DraggableLink = ({
           href={link.link}
           target="_blank"
           key={index}
-          className="flex w-3/4 sm:w-1/2 lg:w-full items-center justify-between text-slate-600 hover:bg-slate-100 py-4 px-1 rounded-lg"
+          className="flex w-5/6 sm:w-1/2 lg:w-full items-center justify-between text-slate-600 hover:bg-slate-100 py-4 px-1 rounded-lg"
         >
           <div className="flex items-center gap-4">
             <img src="../hold.svg" />
