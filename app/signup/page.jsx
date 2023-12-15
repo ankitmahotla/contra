@@ -30,6 +30,7 @@ export default function Signup() {
             <button
               className="block lg:hidden rounded-full mb-10"
               style={{ marginTop: -50 }}
+              onClick={prevStep}
             >
               <img src="../prev.svg" alt="prev" />
             </button>

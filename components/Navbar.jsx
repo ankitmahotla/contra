@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-between py-2 lg:py-4 px-8 border border-b-slate-200">
+    <div className="flex items-center justify-between py-2 lg:py-4 px-8 border-b border-slate-200">
       <h1 className="hidden lg:block text-xl font-semibold">Dashboard</h1>
       <button className="block lg:hidden">
         <img src="../hamburger.svg" className="w-6" />
