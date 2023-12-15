@@ -7,6 +7,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { CiLink } from "react-icons/ci";
 import { GoPencil, GoCheck } from "react-icons/go";
 import { MdOutlineDelete } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 const DraggableLink = ({
   link,
@@ -82,6 +83,7 @@ const DraggableLink = ({
 };
 
 export default function Five({ prevStep, nextStep, links, setLinks }) {
+  const router = useRouter();
   const [showInputForm, setShowInputForm] = useState(false);
   const [websiteLink, setWebsiteLink] = useState("");
   const [linkName, setLinkName] = useState("");
@@ -311,6 +313,7 @@ export default function Five({ prevStep, nextStep, links, setLinks }) {
               disabled={
                 showInputForm || links?.length === 0 || links.length > 7
               }
+              onClick={() => router.push("/home")}
             >
               Complete
             </button>
